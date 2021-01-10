@@ -1,0 +1,50 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        
+        <div class="navbar-header">
+             <a class="navbar-brand" href="/"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+        </div>
+
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-left">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-copyright" aria-hidden="true"></i> Categories<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/shopping/books/"><i class="fa fa-book" aria-hidden="true"></i>Books</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="/shopping/games/"><i class="fa fa-gamepad" aria-hidden="true"></i>Games</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="/shopping/sports/"><i class="fa fa-trophy" aria-hidden="true"></i> Sports</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="/shopping/electronics/"><i class="fa fa-bolt" aria-hidden="true"></i>Electronics</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/shopping-cart/">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i> Shopping Cart
+                         <span class="badge">{{session.cart.totalQty}}</span>
+                    </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> {{# if login}} <i class="fa fa-user" aria-hidden="true"></i> User Management {{else}} Login &amp; Signup {{/if}} <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                       {{# if login }}
+                        <li><a href="/user/profile"><i class="fa fa-user-md" aria-hidden="true"></i> Profile</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="/user/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a></li>
+                        {{else}}
+                        <li><a href="/user/signup"><i class="fa fa-user-plus" aria-hidden="true"></i> Sign Up</a></li>
+                        <li role="separator" class="divider">
+                        <li><a href="/user/signin"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a></li>
+                       {{/if}}
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>

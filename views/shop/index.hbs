@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+        <div id="success" class="alert alert-success" {{#if noMessages}}hidden{{/if}}>
+            {{ successMsg }}
+        </div>
+    </div>
+</div>
+		
+		<div class="container text-center">
+		<div class="col-md-6 col-sm-12">		
+        <div>
+          <h1>My Shopping Cart</h1>
+          <img src="https://www.freeiconspng.com/uploads/cart-icon-10.png" alt="">
+        </div>
+		</div>
+			
+			<div class="col-md-6 col-sm-12 text-left">
+         <h2>Available Products</h2>
+				<ul>
+					<li class="row" style="padding-top: 2%; padding-bottom:2%">
+						<span class="itemName">Computer Science Books</span>
+					</li>
+					<li class="row" style="padding-top: 2%; padding-bottom:2%">
+						<span class="itemName">Computer Games</span>				
+					</li>
+					<li class="row" style="padding-top: 2%; padding-bottom:2%">
+						<span class="itemName">Electronic Appliances</span>
+					</li>
+					<li class="row" style="padding-top: 2%; padding-bottom:2%">
+						<span class="itemName">Sports Accessories</span>				
+					</li>
+          <li class="row" style="padding-top: 2%; padding-bottom:2%">
+						<span class="itemName">Home &amp; Furniture</span>				
+					</li>
+				</ul>
+        <div class="container" style="height: 25px;"></div>
+        <p>
+					Frontend of this shopping cart is developed in <b>HTML, CSS, Bootstrap</b> and hbs templating engine. And Backend is developed in <b>Nodejs</b> with <b>express Js</b>. I used <b>NOSQL MongoDb database</b> to store products and users information.For the authentication <b>Passport</b> middleware is used. For purchasing the item <b>Stripe</b> is used as 3rd party.
+				</p>
+			</div>
+
+		</div>
+
+		<!-- The popover content -->
+
+		<div id="popover" style="display: none">
+			<a href="#"><span class="glyphicon glyphicon-pencil"></span></a>
+			<a href="#"><span class="glyphicon glyphicon-remove"></span></a>
+		</div>
+		
+		<!-- JavaScript includes -->
